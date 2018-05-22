@@ -18,10 +18,9 @@
   window._pcq = window._pcq || [];
   _pcq.push(['noTrigger',true]);
   
-  _pcq.push([‘APIReady’, callbackOnSuccessFunction]);
-  function callbackOnSuccessFunction() {
   if( /Mobi/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent))
-  { setTimeout(function(){_pcq.push([‘triggerOptIn’]);},4000); }
+  { 
+    setTimeout(function(){_pcq.push([‘triggerOptIn’]);},4000); }
   }
   
 </script>
