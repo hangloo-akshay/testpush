@@ -14,9 +14,8 @@
   
   window._pcq = window._pcq || [];
   _pcq.push(['noTrigger',true]);
-
-    console.log(x);
-    _pcq.push(['triggerOptIn',{httpWindowOnly: false}]); 
+    
+  window.setTimeout(function(){_pcq.push(['triggerOptIn',{httpWindowOnly: false}]);},2000);
   
 </script>
   
