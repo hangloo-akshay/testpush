@@ -11,11 +11,15 @@
       h=u.getElementsByTagName('script')[0];
       h.parentNode.insertBefore(s,h);
   })(window,document);
+</script>
   
-  window._pcq = window._pcq || [];
-  _pcq.push(['noTrigger',true]);
+<script>  
     
-  window.setTimeout(function(){_pcq.push(['triggerOptIn',{httpWindowOnly: false}]);},2000);
+_pcq.push([‘APIReady’, callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
+function callbackOnAPIReady()
+{
+ _pcq.push([‘triggerOptIn’]);
+}
   
 </script>
   
