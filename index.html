@@ -14,9 +14,16 @@
 </script>
 
 <script>
-if (/Mobi|Android/i.test(navigator.userAgent)) {
+
+  window._pcq = window._pcq || [];
+  _pcq.push(['noTrigger',true]);
+  
+  if(pushcrew.isAPIReady) {
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
     window._pcq.push(['triggerOptIn']);
-}
+    }
+  }
+  
 </script>
 </head>
 </html>
