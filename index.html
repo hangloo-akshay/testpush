@@ -17,12 +17,15 @@
   console.log(navigator.userAgent);
   window._pcq = window._pcq || [];
   _pcq.push(['noTrigger',true]);
- 
-  console.log(Test step 1)
-    if (/Mobi/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent)) {
-    window._pcq.push(['triggerOptIn']);
-  }
+</script>
   
+<script>
+  window._pcq = window._pcq || [];
+  _pcq.push([‘APIReady’, callbackOnSuccessFunction]); //will execute callback function when PushCrew API is ready
+  function callbackOnSuccessFunction() {
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+  { setTimeout(function(){_pcq.push([‘triggerOptIn’]);},4000); }
+  }
 </script>
 </head>
   TEST
