@@ -18,12 +18,9 @@
   console.log(navigator.userAgent);
   window._pcq = window._pcq || [];
   _pcq.push(['noTrigger',true]);
-  
-  if( /Mobi/i.test(navigator.userAgent))
-  { 
+
     console.log(x);
-    window._pcq.push(['triggerOptIn',{httpWindowOnly: true}]); 
-  }
+    window._pcq.push(['triggerOptIn',{httpWindowOnly: false}]); 
   
 </script>
   
